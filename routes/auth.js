@@ -1,4 +1,4 @@
- const router = require("express").Router();
+const router = require("express").Router();
 //const Joi = require('joi');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
@@ -12,7 +12,7 @@ router.post("/register", async (req, res) => {
 
     if (password.length < 6 || password.length > 12) {
       return res.status(400).json({
-        status: "fail",
+        status: "failed",
         error: "Password range is between 6 to 12 characters only",
       });
     }
